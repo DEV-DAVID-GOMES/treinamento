@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>identificador de nacionalidade</title>
+</head>
+<body>
+    <h1>identificador de nacionalidade</h1>
+    <input type="text" id="nacionalidade" value="insira seu pais de nascencia">
+    <input type="button" value="analisar" onclick="analisar()">
+    <div id= "seupais">
+    </div>
+    <script>
+        function analisar() {
+        var txtv = window.document.querySelector("input#nacionalidade")
+        var naci = txtv.value
+        var seupais = window.document.querySelector("div#seupais")
+        seupais.innerHTML += `<p>seu pais de nascencia e: <strong>${naci}</strong></P>`;
+        if(naci.toLowerCase() === 'brasil') {
+            seupais.innerHTML += `<p><strong>voce e brasilero</strong></p>`;
+        } else{
+            seupais.innerHTML +=`voce nao e brasileiro`
+        }
+        }
+    </script>
+
+
+
+</body>
+</html>
